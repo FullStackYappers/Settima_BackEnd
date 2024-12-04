@@ -1,31 +1,57 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+namespace Database\Seeders;
 
-return new class extends Migration
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class PersonSeeder extends Seeder
 {
     /**
-     * Run the migrations.
+     * Run the database seeds.
      */
-    public function up(): void
+    public function run(): void
     {
-        Schema::create('person', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->date('birthday');
-            $table->text('biography');
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
-        });
-    }
+        $data = [
+            ['name' => 'Quentin Tarantino', 'birthday' => '1963-03-27', 'biography' => 'Quentin Jerome Tarantino was born in Knoxville, Tennessee. His father, Tony Tarantino, is an Italian-American actor and musician from New York, and his mother, Connie (McHugh), is a nurse from Tennessee. Quentin moved with his mother to Torrance, California, when he was four years old.'],
+            ['name' => 'Uma Thurman', 'birthday' => '1970-04-29', 'biography' => 'Uma Karuna Thurman was born in Boston, Massachusetts, into a highly unorthodox and internationally-minded family. She is the daughter of Nena Thurman (née Birgitte Caroline von Schlebrügge), a fashion model and socialite who now runs a mountain retreat, and of Robert Thurman (Robert Alexander Farrar Thurman), a professor and academic who is one of the nation\'s foremost Buddhist scholars. Uma\'s mother was born in Mexico City, Mexico, to a German father and a Swedish mother (who herself was of Swedish, Danish, and German descent). Uma\'s father, a New Yorker, has English, Scots-Irish, Scottish, and German ancestry. Uma grew up in Amherst, Massachusetts, where her father worked at Amherst College.'],
+            ['name' => 'David Carradine', 'birthday' => '1936-12-08', 'biography' => 'David Carradine was born in Hollywood, California, the eldest son of legendary character actor John Carradine, and his wife, Ardanelle Abigail (McCool). He was a member of an acting family that included brothers Keith Carradine and Robert Carradine as well as his daughters Calista Carradine and Kansas Carradine, and nieces Ever Carradine and Martha Plimpton.'],
+            ['name' => 'Daryl Hannah', 'birthday' => '1960-12-03', 'biography' => 'Daryl Christine Hannah was born and raised in Chicago, Illinois. She is the daughter of Susan Jeanne (Metzger), a schoolteacher and later a producer, and Donald Christian Hannah, who owned a tugboat/barge company. Her stepfather was music journalist/promoter Jerrold Wexler. Her siblings are Page Hannah, Don Hannah and Tanya Wexler. She has Scottish, Norwegian, Danish, Irish, English, and German ancestry.'],
+            ['name' => 'RZA', 'birthday' => '1969-07-05', 'biography' => "Robert Fitzgerald Diggs better known by his stage name the RZA, is an American rapper, actor, filmmaker, and record producer. He is the de facto leader of the hip hop group Wu-Tang Clan, having produced most albums for the group and its respective members. He is a cousin of two other original Wu-Tang Clan members: GZA and Ol' Dirty Bastard. He has also released solo albums under the alter-ego Bobby Digital, along with executive producing credits for side projects. After forming the Wu-Tang Clan, RZA was a founding member of the horror-core group Gravediggaz, where he went by the name The RZArector."],
+            ['name' => 'Robert Richardson', 'birthday' => '1955-08-27', 'biography' => "Robert Richardson has won three Academy Awards and earned seven Academy Award nominations for his cinematography. His work on director Oliver Stone's JFK earned him his first Oscar. His second and third came with The Aviator and Hugo directed by Martin Scorsese. These two films also garnered him BAFTA nominations for Best Cinematographer."],
+            ['name' => 'Bob Beher', 'birthday' => '1983-02-21', 'biography' => "Bob Beher was the Sound Editor for Kill Bill: Vol. 1"],
+            ['name' => 'Lana Wachowski', 'birthday' => '1965-06-21', 'biography' => "Lana Wachowski and her sister Lilly Wachowski, also known as the Wachowskis, are the duo behind such ground-breaking movies as The Matrix (1999) and Cloud Atlas (2012). "],
+            ['name' => 'Lilly Wachowski', 'birthday' => '1967-12-29', 'biography' => "Director, writer, and producer Lilly Wachowski was born in 1967 in Chicago, the daughter of Lynne, a nurse and painter, and Ron, a businessman. Lilly was educated at Kellogg Elementary School in Chicago, before moving on to Whitney M. Young High School. After graduating from high school, she attended Emerson College in Boston but dropped out."],
+            ['name' => 'Keanu Reeves', 'birthday' => '1964-09-02', 'biography' => "Keanu Charles Reeves, whose first name means \"cool breeze over the mountains\" in Hawaiian, was born September 2, 1964 in Beirut, Lebanon. He is the son of Patric Reeves, a showgirl and costume designer, and Samuel Nowlin Reeves, a geologist. Keanu's father was born in Hawaii, of Native Hawaiian and Chinese ancestry while Keanu's mother is originally from Essex England. After his parents' marriage dissolved, Keanu moved with his mother and younger sister, Kim Reeves, to New York City, then Toronto.  In high school, Reeves was lukewarm toward academics but took a keen interest in ice hockey (as team goalie, he earned the nickname \"The Wall\") and drama. He eventually dropped out of school to pursue an acting career."],
+            ['name' => 'Laurence Fishburne', 'birthday' => '1961-07-30', 'biography' => "Critically hailed for his forceful, militant, authoritative figures and one of Hollywood's most talented and versatile performers, Laurence (John) Fishburne III has been the recipient of numerous awards, including a number of NAACP Image honors."],
+            ['name' => 'Carrie-Anne Moss', 'birthday' => '1967-08-21', 'biography' => "Carrie-Anne Moss was born and raised in Vancouver, Canada. At age 20, after studying at the American Academy of Dramatic Arts, she moved to Europe to pursue a career in modeling. While in Spain she was cast in the TV show Dark Justice which was produced in Barcelona for its first season and Los Angeles for its second. Once in LA, Carrie-Anne was cast in other series regular opportunities like Matrix with Nick Mancuso (which coincidentally presaged the movie that would later make her famous), and then Aaron Spelling's Models Inc."],
+            ['name' => 'Don Davis', 'birthday' => '1957-02-04', 'biography' => "Donald Davis is an American film composer and conductor who is known for composing the music of The Matrix trilogy, Enter the Matrix, The Animatrix, SeaQuest 2032, the Beauty and the Beast television series and Jurassic Park III. He did orchestration for films composed by James Horner, Randy Newman and Alan Silvestri."],
+            ['name' => 'Bill Pope', 'birthday' => '1952-06-19', 'biography' => "Bill Pope was born on June 19, 1952 in Bowling Green, Kentucky, USA. He is a cinematographer and director, known for The Matrix (1999), The Jungle Book (2016) and Spider-Man 2 (2004). He is married to Sharon Oreck. They have one child."],
+            ['name' => 'Dane A. Davis', 'birthday' => '1955-05-13', 'biography' => "Dane A. Davis, as Sound Designer / Supervising Sound Editor, has completed 120 feature films since 1984."],
+            ['name' => 'Peter Jackson', 'birthday' => '1961-10-31', 'biography' => "Sir Peter Jackson made history with The Lord of the Rings trilogy, becoming the first person to direct three major feature films simultaneously. As a follow up to The Lord of the Rings trilogy, in 2005, Jackson directed, wrote, and produced King Kong, for Universal Pictures. The film grossed over $500 million and won three Oscars®."],
+            ['name' => 'J.R.R. Tolkien', 'birthday' => '1892-01-03', 'biography' => "English writer, scholar and philologist. He wrote Lord of the Rings over a period of about 14 years."],
+            ['name' => 'Fran Walsh', 'birthday' => '1959-01-10', 'biography' => "Fran Walsh is a New Zealand writer and wife of New Zealand film director Peter Jackson. She co-wrote The Lord of the Rings film trilogy, which is seen by many as Jackson's magnum opus and one of the most significant film series ever made. She also wrote The Hobbit trilogy, a prequel to Jackson's Lord of the Rings trilogy, King Kong, Mortal Engines, The Frighteners, Heavenly Creatures, The Lovely Bones and Meet the Feebles."],
+            ['name' => 'Philippa Boyens', 'birthday' => '1974-10-20', 'biography' => "Philippa Boyens is a New Zealand writer and producer who has co-written several of Peter Jackson's films. She co-wrote the Academy Award winning Lord of the Rings trilogy, the Hobbit trilogy which is a prequel to the Lord of the Rings films, The Lovely Bones, Mortal Engines, and the 2005 remake of King Kong. She also co-produced District 9."],
+            ['name' => 'Elijah Wood', 'birthday' => '1981-01-28', 'biography' => "Elijah Wood is an American actor best known for portraying Frodo Baggins in Peter Jackson's blockbuster Lord of the Rings film trilogy. In addition to reprising the role in The Hobbit series, Wood also played Ryan in the FX television comedy Wilfred (2011) and voiced Beck in the Disney XD animated television series Tron: Uprising (2012)."],
+            ['name' => 'Ian McKellen', 'birthday' => '1939-05-25', 'biography' => "Widely regarded as one of the greatest stage and screen actors both in his native Great Britain and internationally, twice nominated for the Oscar and recipient of every major theatrical award in the UK and US, Ian Murray McKellen was born on May 25, 1939 in Burnley, Lancashire, England, to Margery Lois (Sutcliffe) and Denis Murray McKellen, a civil engineer and lay preacher. He is of Scottish, Northern Irish, and English descent."],
+            ['name' => 'Orlando Bloom', 'birthday' => '1977-01-13', 'biography' => "Orlando Jonathan Blanchard Copeland Bloom was born on January 13, 1977 in Canterbury, Kent, England. His mother, Sonia Constance Josephine Bloom (née Copeland), was born in Kolkata, India, to an English family then-resident there."],
+            ['name' => 'Howard Shore', 'birthday' => '1946-10-18', 'biography' => "Howard Shore is a Canadian composer, born in Toronto. He was born in a Jewish family. He started studying music when 8-years-old, and played as a member of bands by the time he was 13-years-old. He was interested in a professional career in music as a teenager. He studied music at the Berklee College of Music, a college of contemporary music located in Boston."],
+            ['name' => 'Andrew Lesnie', 'birthday' => '1956-01-01', 'biography' => "Andrew Lesnie was an Australian cinematographer who frequently worked with Peter Jackson. He did the photography for The Lord of the Rings and The Hobbit film trilogies. He also did the photography for Babe, King Kong, Rise of the Planet of the Apes, I Am Legend and The Lovely Bones. He passed away in April 2015 due to a heart attack."],
+            ['name' => 'Mike Hopkins', 'birthday' => '1959-08-12', 'biography' => "Mike Hopkins was born on August 12, 1959 in Greytown, New Zealand. He is known for King Kong (2005), The Lord of the Rings: The Two Towers (2002) and Transformers (2007). He was married to Nicci. He died on December 30, 2012 in Waiohine River, Wellington Region, New Zealand."],
+            ['name' => 'James Cameron', 'birthday' => '1954-08-16', 'biography' => "James Francis Cameron was born on August 16, 1954 in Kapuskasing, Ontario, Canada. He moved to the United States in 1971. The son of an engineer, he majored in physics at California State University before switching to English, and eventually dropping out. He then drove a truck to support his screenwriting ambition. James Cameron is now one of the most sought-after directors in Hollywood."],
+            ['name' => 'Sam Worthington', 'birthday' => '1976-08-02', 'biography' => "Sam Worthington, born in 1976 in England and raised in Australia, is known for his roles in Avatar (2009), Terminator Salvation (2009), and Clash of the Titans (2010). He won an AFI Award for Somersault (2004) and co-founded Full Clip Productions in 2010."],
+            ['name' => 'Zoe Saldana', 'birthday' => '1978-06-19', 'biography' => "Zoe Saldana, born in 1978 in New Jersey, trained in dance in the Dominican Republic before moving back to the U.S. at 17. She gained fame with her role in Center Stage (2000) and quickly became known for her work in major films, earning praise from industry leaders."],
+            ['name' => 'Sigourney Weaver', 'birthday' => '1949-10-08', 'biography' => "Sigourney Weaver, a Yale-trained actress, is known for iconic roles in Alien, Gorillas in the Mist, and Avatar: The Way of Water. With a career spanning 50 years, she has earned multiple awards, excelled in film, stage, and TV, and is an advocate for environmental and social causes."],
+            ['name' => 'James Horner', 'birthday' => '1953-08-14', 'biography' => "James Horner, acclaimed composer of over 75 films, rose to fame with Star Trek II: The Wrath of Khan (1982). Known for collaborations with top directors, he also composed classical works. Horner tragically died in a plane crash in 2015 at 61."],
+            ['name' => 'Mauro Fiore', 'birthday' => '1964-11-15', 'biography' => "Mauro Fiore was born on November 15, 1964 in Marzi, Calabria, Italy. He is a cinematographer, known for Avatar (2009), Training Day (2001) and The Island (2005). He has been married to Christine Vollmer since 2000. They have three children."],
+            ['name' => 'Sincere Connor', 'birthday' => '1967-11-22', 'biography' => "Sincere Connor, a Charlotte-based cinematographer, holds a Bachelor’s in Digital Filmmaking from the Los Angeles Film School. Passionate about storytelling through the lens, Sincere explores the interplay of reality and imagination. He is currently pursuing a Master’s at Liberty University."],
+        ];
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('person');
+        foreach ($data as $person) {
+            DB::table('person')->updateOrInsert(
+                ['name' => $person['name']], //Condition based on name 
+                $person //Data to insert/update
+            );
+        }
     }
-};
+}
