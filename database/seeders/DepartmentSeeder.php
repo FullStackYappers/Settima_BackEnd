@@ -12,7 +12,7 @@ class DepartmentSeeder extends Seeder
      */
     public function run(): void
     {
-        $departments = [
+        $department = [
             ['name' => 'Music'],
             ['name' => 'Sound'],
             ['name' => 'Cinematography'],
@@ -20,6 +20,6 @@ class DepartmentSeeder extends Seeder
             ['name' => 'Acting'],
         ];
 
-        DB::table('departments')->insert($departments);
+        DB::table('department')->insert($department);
     }
 }
