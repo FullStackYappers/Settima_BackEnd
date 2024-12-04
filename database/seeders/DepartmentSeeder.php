@@ -13,11 +13,11 @@ class DepartmentSeeder extends Seeder
     public function run(): void
     {
         $department = [
+            ['name' => 'Director'],
             ['name' => 'Music'],
             ['name' => 'Sound'],
             ['name' => 'Cinematography'],
             ['name' => 'Plot'],
-            ['name' => 'Acting'],
         ];
 
         DB::table('department')->insert($department);
