@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MovieSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class MovieSeeder extends Seeder
      */
     public function run(): void
     {
-        \DB::table('movies')->insert([
+        DB::table('movie')->insert([
             ['title' => 'Kill Bill: Vol. 1', 'release_year' => 2003, 'runtime' => 111, 'description' => 'An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.', 'rate_avg' => 0.0],
             ['title' => 'The Matrix', 'release_year' => 1999, 'runtime' => 136, 'description' => 'Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.', 'rate_avg' => 0.0],
             ['title' => 'The Lord of the Rings: The Fellowship of the Ring', 'release_year' => 2001, 'runtime' => 179, 'description' => 'Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator.', 'rate_avg' => 0.0],

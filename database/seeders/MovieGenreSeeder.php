@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MovieGenreSeeder extends Seeder
 {
@@ -79,9 +80,9 @@ class MovieGenreSeeder extends Seeder
         ];
 
         foreach ($movieGenreMappings as $mapping) {
-            $movie = DB::table('movies')->where('title', $mapping['movie_title'])->first();
+            $movie = DB::table('movie')->where('title', $mapping['movie_title'])->first();
             foreach ($mapping['genre_names'] as $genreName) {
-                $genre = DB::table('genres')->where('name', $genreName)->first();
+                $genre = DB::table('genre')->where('name', $genreName)->first();
                 DB::table('movie_genre')->insert([
                     'movie_id' => $movie->id,
                     'genre_id' => $genre->id,
