@@ -14,10 +14,11 @@ class DepartmentSeeder extends Seeder
     {
         $department = [
             ['name' => 'Director'],
-            ['name' => 'Music'],
-            ['name' => 'Sound'],
-            ['name' => 'Cinematography'],
-            ['name' => 'Plot'],
+            ['name' => 'Composer'],
+            ['name' => 'Costume Designer'],
+            ['name' => 'Cinematographer'],
+            ['name' => 'Writer'],
+            ['name' => 'Editor'], 
         ];
 
         DB::table('department')->insert($department);
