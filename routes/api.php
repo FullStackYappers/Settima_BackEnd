@@ -14,7 +14,10 @@ Route::get('/movies', [MovieController::class, 'index']);
 Route::get('/movies/{id}', [MovieController::class, 'show']);    
 
 Route::middleware(['auth:sanctum', 'is_admin'])->group(function () {
-    Route::post('/movies', [MovieController::class, 'store']);
-    Route::put('/movies/{id}', [MovieController::class, 'update']); 
-    Route::delete('/movies/{id}', [MovieController::class, 'destroy']); 
+    //Route::post('/movies', [MovieController::class, 'store']);
+   // Route::put('/movies/{id}', [MovieController::class, 'update']); 
+   // Route::delete('/movies/{id}', [MovieController::class, 'destroy']); 
+
 });
+
+Route::apiResource('/movies',MovieController::class);
