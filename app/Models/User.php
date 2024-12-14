@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+
 
 class User extends Authenticatable
 {
@@ -17,6 +19,8 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
+        'about',
         'email',
         'password',
     
@@ -42,4 +46,15 @@ class User extends Authenticatable
         'password' => 'hashed',
         'is_admin' => 'boolean', // Cast is_admin as a boolean
     ];
+
+    // Send email verification notification
+    public function sendEmailVerificationNotification()
+    {
+        $this->notify(new VerifyEmail);
+    }
+
+    //Make sure your .env file has correct email settings:
+    /*  MAIL_FROM_ADDRESS="noreply@example.com"
+        MAIL_FROM_NAME="Your App Name"  */
+
 }
