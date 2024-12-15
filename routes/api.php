@@ -25,24 +25,19 @@ Route::get('/movies/{id}', [MovieController::class, 'show']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
 
-   // Ratings
-   Route::post('/movies/{id}/rate', [RatingController::class, 'rateMovie']);
-   Route::get('/movies/{id}/ratings', [RatingController::class, 'getMovieRatings']);
-   Route::get('/user/ratings', [RatingController::class, 'getUserRatings']);
+// Ratings and Reviews
+Route::post('/movies/{id}/rate', [RatingController::class, 'rateMovie']);       // Add/Update Rating & Review
+Route::get('/movies/{id}/ratings', [RatingController::class, 'getMovieRatings']); // Get Ratings for a Movie
+Route::get('/user/ratings', [RatingController::class, 'getUserRatings']);        // Get User's Ratings
 
-   // Reviews
-   Route::post('/movies/{id}/review', [ReviewController::class, 'addReview']);
-   Route::get('/movies/{id}/reviews', [ReviewController::class, 'getMovieReviews']);
-   Route::get('/user/reviews', [ReviewController::class, 'getUserReviews']);
+// Watch History
+Route::post('/movies/{id}/watched', [WatchHistoryController::class, 'markWatched']);
+Route::get('/user/watch-history', [WatchHistoryController::class, 'getWatchHistory']);
 
-   // Watch History
-   Route::post('/movies/{id}/watched', [WatchHistoryController::class, 'markWatched']);
-   Route::get('/user/watch-history', [WatchHistoryController::class, 'getWatchHistory']);
-
-   // Favorites
-   Route::post('/movies/{id}/favorite', [FavoritesController::class, 'addFavorite']);
-   Route::delete('/movies/{id}/favorite', [FavoritesController::class, 'removeFavorite']);
-   Route::get('/user/favorites', [FavoritesController::class, 'getFavorites']);
+// Favorites
+Route::post('/movies/{id}/favorite', [FavoritesController::class, 'addFavorite']);
+Route::delete('/movies/{id}/favorite', [FavoritesController::class, 'removeFavorite']);
+Route::get('/user/favorites', [FavoritesController::class, 'getFavorites']);
 
 
 // Admin-Only Routes

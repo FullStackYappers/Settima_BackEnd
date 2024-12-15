@@ -36,7 +36,8 @@ class RatingController extends Controller
    
     public function getMovieRatings($movieId)
     {
-        $ratings = Rating::where('movie_id', $movieId)->get();
+        $ratings = Rating::where('movie_id', $movieId)
+            ->get(['user_id', 'acting', 'plot', 'music', 'costume_design', 'cinematography', 'editing', 'review', 'updated_at']);
 
         return response()->json(['data' => $ratings]);
     }
@@ -45,7 +46,7 @@ class RatingController extends Controller
     {
         $ratings = Rating::with('movie')
             ->where('user_id', auth()->id())
-            ->get();
+            ->get(['movie_id', 'acting', 'plot', 'music', 'costume_design', 'cinematography', 'editing', 'review', 'updated_at']);
 
         return response()->json(['data' => $ratings]);
     }
