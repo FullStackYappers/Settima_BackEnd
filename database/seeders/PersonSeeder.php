@@ -45,6 +45,7 @@ class PersonSeeder extends Seeder
             ['name' => 'James Horner', 'birthday' => '1953-08-14', 'biography' => "James Horner, acclaimed composer of over 75 films, rose to fame with Star Trek II: The Wrath of Khan (1982). Known for collaborations with top directors, he also composed classical works. Horner tragically died in a plane crash in 2015 at 61."],
             ['name' => 'Mauro Fiore', 'birthday' => '1964-11-15', 'biography' => "Mauro Fiore was born on November 15, 1964 in Marzi, Calabria, Italy. He is a cinematographer, known for Avatar (2009), Training Day (2001) and The Island (2005). He has been married to Christine Vollmer since 2000. They have three children."],
             ['name' => 'Sincere Connor', 'birthday' => '1967-11-22', 'biography' => "Sincere Connor, a Charlotte-based cinematographer, holds a Bachelor’s in Digital Filmmaking from the Los Angeles Film School. Passionate about storytelling through the lens, Sincere explores the interplay of reality and imagination. He is currently pursuing a Master’s at Liberty University."],
+            ['name' => 'The Director', 'birthday' => '2003-06-11', 'biography' => "Born in Chennai. Lives in Germany. Is a German. IBCG - Indian Born Confused German"]
         ];
 
         foreach ($data as $person) {
