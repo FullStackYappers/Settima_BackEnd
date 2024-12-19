@@ -6,6 +6,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FavoritesController;
+use App\Http\Controllers\RatingController;
+use App\Http\Controllers\WatchHistoryController;
+
 
 // Authentication Routes
 Route::post('/login', [AuthController::class, 'login']); 
