@@ -12,6 +12,8 @@ class DepartmentSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
         $department = [
             ['name' => 'Director'],
             ['name' => 'Composer'],
@@ -20,7 +22,11 @@ class DepartmentSeeder extends Seeder
             ['name' => 'Writer'],
             ['name' => 'Editor'], 
         ];
+        
+        DB::table('department')->truncate();
 
         DB::table('department')->insert($department);
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     }
 }
