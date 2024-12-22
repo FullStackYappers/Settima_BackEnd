@@ -13,7 +13,7 @@ class GenreSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('genre')->insert([
+        $genres = [
             ['name' => 'Action'],
             ['name' => 'Crime'],
             ['name' => 'Science Fiction'],
@@ -32,6 +32,13 @@ class GenreSeeder extends Seeder
             ['name' => 'History'],
             ['name' => 'War'],
             ['name' => 'Western'],
-        ]);
+        ];
+
+        foreach ($genres as $genre) {
+            DB::table('genre')->updateOrInsert(
+                ['name' => $genre['name']],
+                $genre
+            );
+        }
     }
 }

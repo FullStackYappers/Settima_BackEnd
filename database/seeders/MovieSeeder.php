@@ -13,7 +13,7 @@ class MovieSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('movie')->insert([
+        $movies = [
             ['title' => 'Kill Bill: Vol. 1', 'release_year' => 2003, 'runtime' => 111, 'description' => 'An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.', 'rate_avg' => 0.0],
             ['title' => 'The Matrix', 'release_year' => 1999, 'runtime' => 136, 'description' => 'Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.', 'rate_avg' => 0.0],
             ['title' => 'The Lord of the Rings: The Fellowship of the Ring', 'release_year' => 2001, 'runtime' => 179, 'description' => 'Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator.', 'rate_avg' => 0.0],
@@ -78,6 +78,13 @@ class MovieSeeder extends Seeder
             ['title' => 'The Power of the Dog', 'release_year' => 2021, 'runtime' => 126, 'description' => 'A domineering but charismatic rancher wages a war of intimidation on his brother’s new wife and her teen son, until long-hidden secrets come to light.', 'rate_avg' => 0.0],
             ['title' => 'Rango', 'release_year' => 2011, 'runtime' => 112, 'description' => 'When Rango, a lost family pet, accidentally winds up in the gritty town of Dirt, the less-than-courageous lizard suddenly finds himself in a new role.', 'rate_avg' => 0.0],
 
-        ]);
+        ];
+
+        foreach($movies as $movie){
+            DB::table('movie')->updateOrInsert(
+                ['title' => $movie['title']],
+                $movie
+            );
+        }
     }
 }
