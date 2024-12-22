@@ -26,7 +26,26 @@ class CastSeeder extends Seeder
             ['movie_title' => 'Avatar', 'person_name' => 'Sam Worthington', 'character_name' => 'Jake Sully'],
             ['movie_title' => 'Avatar', 'person_name' => 'Zoe Saldana', 'character_name' => 'Neytiri'],
             ['movie_title' => 'Avatar', 'person_name' => 'Sigourney Weaver', 'character_name' => 'Dr. Grace Augustine'],
+            ['movie_title' => 'Joker', 'person_name' => 'Joaquin Phoenix', 'character_name' => 'Arthur Fleck'],
+            ['movie_title' => 'Joker', 'person_name' => 'Robert De Niro', 'character_name' => 'Murray Franklin'],
+            ['movie_title' => 'Joker', 'person_name' => 'Zazie Beetz', 'character_name' => 'Sophie Dumond'],
+            ['movie_title' => 'Pulp Fiction', 'person_name' => 'John Travolta', 'character_name' => 'Vincent Vega'],
+            ['movie_title' => 'Pulp Fiction', 'person_name' => 'Uma Thurman', 'character_name' => 'Jules Winnfield'],
+            ['movie_title' => 'Pulp Fiction', 'person_name' => 'Samuel L. Jackson', 'character_name' => 'Mia Wallace'],
+            ['movie_title' => 'Interstellar', 'person_name' => 'Matthew McConaughey', 'character_name' => 'Cooper'],
+            ['movie_title' => 'Interstellar', 'person_name' => 'Anne Hathaway', 'character_name' => 'Brand'],
+            ['movie_title' => 'Interstellar', 'person_name' => 'Jessica Chastain', 'character_name' => 'Murph'],
+            ['movie_title' => 'Inception', 'person_name' => 'Leonardo DiCaprio', 'character_name' => 'Cobb'],
+            ['movie_title' => 'Inception', 'person_name' => 'Joseph Gordon-Levitt', 'character_name' => 'Arthur'],
+            ['movie_title' => 'Inception', 'person_name' => 'Elliot Page', 'character_name' => 'Ariadne'],
+            ['movie_title' => 'Dune', 'person_name' => 'Timothée Chalamet', 'character_name' => 'Paul Atreides'],
+            ['movie_title' => 'Dune', 'person_name' => 'Rebecca Ferguson', 'character_name' => 'Lady Jessica Atreides'],
+            ['movie_title' => 'Dune', 'person_name' => 'Zendaya', 'character_name' => 'Chani'],
+            //['movie_title' => '', 'person_name' => '', 'character_name' => ''],
         ];
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('cast')->truncate();
 
         foreach ($castMappings as $mapping){
             //Retrieve Movie ID
@@ -34,6 +53,7 @@ class CastSeeder extends Seeder
 
             //Retrieve Person ID
             $person = DB::table('person')->where('name', $mapping['person_name'])->first();
+            
             
             //Add MovieID, PersonID and character name
             if($movie && $person){
@@ -43,6 +63,8 @@ class CastSeeder extends Seeder
                     'character_name' => $mapping['character_name']
                 ]);
             }
+
+            DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         }
     }
