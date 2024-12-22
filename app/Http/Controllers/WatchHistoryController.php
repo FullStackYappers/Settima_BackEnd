@@ -17,7 +17,8 @@ class WatchHistoryController extends Controller
 
         return response()->json(['message' => 'Movie marked as watched.']);
     }
-
+    //unmarked watch 
+    
     public function getWatchHistory()
     {
         $watchedMovies = WatchHistory::with('movie')
