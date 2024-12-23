@@ -41,11 +41,23 @@ class CastSeeder extends Seeder
             ['movie_title' => 'Dune', 'person_name' => 'Timothée Chalamet', 'character_name' => 'Paul Atreides'],
             ['movie_title' => 'Dune', 'person_name' => 'Rebecca Ferguson', 'character_name' => 'Lady Jessica Atreides'],
             ['movie_title' => 'Dune', 'person_name' => 'Zendaya', 'character_name' => 'Chani'],
+            ['movie_title' => 'The Incredibles', 'person_name' => 'Craig T. Nelson', 'character_name' => 'Bob Parr / Mr. Incredible (voice)'],
+            ['movie_title' => 'The Incredibles', 'person_name' => 'Samuel L. Jackson', 'character_name' => 'Lucius Best / Frozone (voice)'],
+            ['movie_title' => 'The Incredibles', 'person_name' => 'Holly Hunter', 'character_name' => 'Helen Parr / Elastigirl (voice)'],
+            ['movie_title' => 'Ratatouille', 'person_name' => 'Brad Garrett', 'character_name' => 'Gusteau (voice)'],
+            ['movie_title' => 'Ratatouille', 'person_name' => 'Lou Romano', 'character_name' => 'Linguini (voice)'],
+            ['movie_title' => 'Ratatouille', 'person_name' => 'Patton Oswalt', 'character_name' => 'Remy (voice)'],
+            ['movie_title' => 'Coco', 'person_name' => 'Anthony Gonzalez', 'character_name' => 'Miguel (voice)'],
+            ['movie_title' => 'Coco', 'person_name' => 'Gael García Bernal', 'character_name' => 'Héctor (voice)'],
+            ['movie_title' => 'Coco', 'person_name' => 'Benjamin Bratt', 'character_name' => 'Ernesto de la Cruz (voice)'],
+            ['movie_title' => 'Home Alone', 'person_name' => 'Macaulay Culkin', 'character_name' => 'Kevin McCallister'],
+            ['movie_title' => 'Home Alone', 'person_name' => 'Joe Pesci', 'character_name' => 'Harry'],
+            ['movie_title' => 'Home Alone', 'person_name' => 'Daniel Stern', 'character_name' => 'Marv'],
+            ['movie_title' => 'The Truman Show', 'person_name' => 'Jim Carrey', 'character_name' => 'Truman Burbank'],
+            ['movie_title' => 'The Truman Show', 'person_name' => 'Ed Harris', 'character_name' => 'Christof'],
+            ['movie_title' => 'The Truman Show', 'person_name' => 'Laura Linney', 'character_name' => 'Meryl Burbank / Hannah Gill'],
             //['movie_title' => '', 'person_name' => '', 'character_name' => ''],
         ];
-
-        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-        DB::table('cast')->truncate();
 
         foreach ($castMappings as $mapping){
             //Retrieve Movie ID
@@ -63,9 +75,6 @@ class CastSeeder extends Seeder
                     'character_name' => $mapping['character_name']
                 ]);
             }
-
-            DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-
         }
     }
 }
