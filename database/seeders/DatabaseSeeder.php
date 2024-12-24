@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
             PersonSeeder::class,
             CastSeeder::class,
             CrewSeeder::class,
+            CountrySeeder::class,
+            MovieCountrySeeder::class,
         ]);
     }
 }
