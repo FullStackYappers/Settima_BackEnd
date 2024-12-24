@@ -56,6 +56,15 @@ class CastSeeder extends Seeder
             ['movie_title' => 'The Truman Show', 'person_name' => 'Jim Carrey', 'character_name' => 'Truman Burbank'],
             ['movie_title' => 'The Truman Show', 'person_name' => 'Ed Harris', 'character_name' => 'Christof'],
             ['movie_title' => 'The Truman Show', 'person_name' => 'Laura Linney', 'character_name' => 'Meryl Burbank / Hannah Gill'],
+            ['movie_title' => 'Midsommar', 'person_name' => 'Florence Pugh', 'character_name' => 'Dani'],
+            ['movie_title' => 'Midsommar', 'person_name' => 'Jack Reynor', 'character_name' => 'Christian'],
+            ['movie_title' => 'Midsommar', 'person_name' => 'Vilhelm Blomgren', 'character_name' => 'Pelle'],
+            ['movie_title' => 'The Lighthouse', 'person_name' => 'Robert Pattinson', 'character_name' => 'Thomas Howard'],
+            ['movie_title' => 'The Lighthouse', 'person_name' => 'Willem Dafoe', 'character_name' => 'Thomas Wake'],
+            ['movie_title' => 'The Lighthouse', 'person_name' => 'Valeriia Karaman', 'character_name' => 'Mermaid'],
+            ['movie_title' => 'Us', 'person_name' => 'Lupita Nyong\'o', 'character_name' => 'Adelaide Wilson / Red'],
+            ['movie_title' => 'Us', 'person_name' => 'Winston Duke', 'character_name' => 'Gabe Wilson / Abraham'],
+            ['movie_title' => 'Us', 'person_name' => 'Elisabeth Moss', 'character_name' => 'Kitty Tyler / Dahlia'],
             //['movie_title' => '', 'person_name' => '', 'character_name' => ''],
         ];
 
