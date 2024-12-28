@@ -8,6 +8,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\WatchHistoryController;
+use App\Http\Controllers\MoviePosterController;
 
 
 // Authentication Routes
@@ -24,6 +25,9 @@ Route::get('/email/verify/{id}/{hash}', [RegisterController::class, 'verify'])
 
 Route::get('/movies', [MovieController::class, 'index']);   
 Route::get('/movies/{id}', [MovieController::class, 'show']); 
+
+//Movie Posters
+Route::get('/movie-posters/{movie_id}', [MoviePosterController::class, 'show']);
 
 
 Route::middleware(['auth:sanctum'])->group(function () {

@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             CrewSeeder::class,
             CountrySeeder::class,
             MovieCountrySeeder::class,
+            MoviePosterSeeder::class,
         ]);
     }
 }
