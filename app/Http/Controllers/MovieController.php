@@ -32,6 +32,7 @@ class MovieController extends Controller
             'runtime' => 'required|integer',
             'description' => 'nullable|string',
             'rate_avg' => 'nullable|numeric|min:0|max:5',
+            'poster_path' => 'nullable|string',
         ]);
 
         $movie = Movie::create($validated);
@@ -50,6 +51,7 @@ class MovieController extends Controller
                 'runtime' => 'sometimes|integer',
                 'description' => 'nullable|string',
                 'rate_avg' => 'nullable|numeric|min:0|max:10',
+                'poster_path' => 'nullable|string',
             ]);
 
             $movie->update($validated);
@@ -72,5 +74,3 @@ class MovieController extends Controller
         return response()->json(['message' => 'Movie not found'], 404);
     }
 }
-
-

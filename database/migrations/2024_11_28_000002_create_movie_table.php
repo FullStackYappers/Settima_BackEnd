@@ -18,9 +18,11 @@ return new class extends Migration
             $table->integer('runtime');
             $table->text('description')->nullable();
             $table->decimal('rate_avg', 2, 1)->default(0.0);
+            $table->string('poster_path')->nullable();
             $table->timestamps();
         });
     }
+
     public function down()
     {
         Schema::dropIfExists('movies');
