@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Movie;
+use App\Models\Genre;
 
 class MovieController extends Controller
 {
@@ -22,6 +23,23 @@ class MovieController extends Controller
         }
 
         return response()->json(['message' => 'Movie not found'], 404);
+    }
+
+    /*Function for fetching movies**/
+    public function fetchMoviesByGenre($genreName)
+    {
+        $genre = Genre::whereRaw('LOWER(name) = ?', [strtolower($genreName)])->first();
+
+
+        if ($genre) {
+            $movies = $genre->movies()
+                ->inRandomOrder()
+                ->get();
+
+            return response()->json(['genre' => $genre->name, 'movies' => $movies]);
+        }
+
+        return response()->json(['message' => 'Genre not found'], 404);
     }
 
     public function store(Request $request)

@@ -19,4 +19,9 @@ class Movie extends Model
         'rate_avg',
         'poster_path',
     ];
+
+    public function genres()
+    {
+        return $this->belongsToMany(Genre::class, 'movie_genre', 'movie_id', 'genre_id');
+    }
 }
