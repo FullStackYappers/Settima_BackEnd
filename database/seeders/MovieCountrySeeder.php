@@ -76,6 +76,14 @@ class MovieCountrySeeder extends Seeder
             ['movie_title' => 'Rango', 'country_names' => ['United States']],
             ['movie_title' => 'Morbius', 'country_names' => ['United States']],
             ['movie_title' => 'IF', 'country_names' => ['United States']],
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'country_names' => ['United Kingdom']],
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'country_names' => ['United Kingdom']],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'country_names' => ['United Kingdom']],
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'country_names' => ['United Kingdom']],
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'country_names' => ['United Kingdom']],
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'country_names' => ['United Kingdom']],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'country_names' => ['United Kingdom']],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'country_names' => ['United Kingdom']],
         ];
 
         foreach ($movieCountryMappings as $mapping) {

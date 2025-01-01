@@ -76,6 +76,14 @@ class MovieGenreSeeder extends Seeder
             ['movie_title' => 'Rango', 'genre_names' => ['Animation', 'Western']],
             ['movie_title' => 'Morbius', 'genre_names' => ['Action', 'Science Fiction']],
             ['movie_title' => 'IF', 'genre_names' => ['Comedy', 'Family']],
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'genre_names' => ['Adventure', 'Fantasy']],
         ];
 
         foreach ($movieGenreMappings as $mapping) {

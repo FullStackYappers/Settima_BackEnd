@@ -466,6 +466,62 @@ class CrewSeeder extends Seeder
             ['movie_title' => 'IF', 'person_name' => 'The Cinematographer', 'department' => 'Cinematographer'],
             ['movie_title' => 'IF', 'person_name' => 'The Editor', 'department' => 'Editor'],
             ['movie_title' => 'IF', 'person_name' => 'The Costume Designer', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'person_name' => 'Chris Columbus', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'person_name' => 'J.K. Rowling', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'person_name' => 'John Williams', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'person_name' => 'John Seale', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'person_name' => 'Roger Burton', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Sorcerer\'s Stone', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'person_name' => 'Chris Columbus', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'person_name' => 'J.K. Rowling', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'person_name' => 'John Williams', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'person_name' => 'Roger Pratt', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'person_name' => 'Roger Burton', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Chamber of Secrets', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Alfonso Cuarón', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'J.K. Rowling', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'John Williams', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Michael Seresin', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Alexandra D. Berner', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'person_name' => 'Mike Newell', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'person_name' => 'J.K. Rowling', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'person_name' => 'Patrick Doyle', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'person_name' => 'Roger Pratt', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'person_name' => 'Mick Audsley', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Goblet of Fire', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'person_name' => 'David Yates', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'person_name' => 'J.K. Rowling', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'person_name' => 'Nicholas Hooper', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'person_name' => 'Sławomir Idziak', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'person_name' => 'Mark Day', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Order of the Phoenix', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'person_name' => 'David Yates', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'person_name' => 'Steve Kloves', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'person_name' => 'Nicholas Hooper', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'person_name' => 'Bruno Delbonnel', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'person_name' => 'Mark Day', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'person_name' => 'David Yates', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'person_name' => 'Steve Kloves', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'person_name' => 'Alexandre Desplat', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'person_name' => 'Eduard Grau', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'person_name' => 'Mark Day', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'David Yates', 'department' => 'Director'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Steve Kloves', 'department' => 'Writer'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Alexandre Desplat', 'department' => 'Composer'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Eduard Grau', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Mark Day', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Judianna Makovsky', 'department' => 'Costume Designer'],
         ];
 
         foreach ($crewMappings as $mapping) {
