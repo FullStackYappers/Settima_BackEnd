@@ -9,7 +9,6 @@ use App\Http\Controllers\FavoritesController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\WatchHistoryController;
 use App\Http\Controllers\MoviePosterController;
-use App\Http\Controllers\MovieGenreController;
 
 
 // Authentication Routes
@@ -25,6 +24,7 @@ Route::get('/email/verify/{id}/{hash}', [RegisterController::class, 'verify'])
     ->name('verification.verify');
 
 Route::get('/movies', [MovieController::class, 'index']);
+Route::get('/movies/random', [MovieController::class, 'indexRandom']);
 Route::get('/movies/{id}', [MovieController::class, 'show']);
 Route::get('/genres/{genreName}/movies', [MovieController::class, 'fetchMoviesByGenre']);
 

@@ -65,7 +65,7 @@ class CastSeeder extends Seeder
             ['movie_title' => 'Us', 'person_name' => 'Lupita Nyong\'o', 'character_name' => 'Adelaide Wilson / Red'],
             ['movie_title' => 'Us', 'person_name' => 'Winston Duke', 'character_name' => 'Gabe Wilson / Abraham'],
             ['movie_title' => 'Us', 'person_name' => 'Elisabeth Moss', 'character_name' => 'Kitty Tyler / Dahlia'],
-            
+
             //Default Movies
             ['movie_title' => 'Oldboy', 'person_name' => 'The Actor', 'character_name' => 'Oh Dae-su'],
             ['movie_title' => 'Oldboy', 'person_name' => 'The Actress', 'character_name' => 'Mi-do'],
@@ -250,21 +250,30 @@ class CastSeeder extends Seeder
             ['movie_title' => 'Rango', 'person_name' => 'The Actor', 'character_name' => 'Rango'],
             ['movie_title' => 'Rango', 'person_name' => 'The Actress', 'character_name' => 'Beans'],
             ['movie_title' => 'Rango', 'person_name' => 'The Person', 'character_name' => 'Rattlesnake Jake'],
+
+            ['movie_title' => 'Morbius', 'person_name' => 'The Actor', 'character_name' => 'Dr. Michael Morbius'],
+            ['movie_title' => 'Morbius', 'person_name' => 'The Actress', 'character_name' => 'Milo'],
+            ['movie_title' => 'Morbius', 'person_name' => 'The Person', 'character_name' => 'Martine Bancroft'],
+
+            ['movie_title' => 'IF', 'person_name' => 'The Actor', 'character_name' => 'Bea'],
+            ['movie_title' => 'IF', 'person_name' => 'The Actress', 'character_name' => 'Cal'],
+            ['movie_title' => 'IF', 'person_name' => 'The Person', 'character_name' => 'Blue'],
+
         ];
 
-        foreach ($castMappings as $mapping){
+        foreach ($castMappings as $mapping) {
             //Retrieve Movie ID
             $movie = DB::table('movie')->where('title', $mapping['movie_title'])->first();
 
             //Retrieve Person ID
             $person = DB::table('person')->where('name', $mapping['person_name'])->first();
-            
-            
+
+
             //Add MovieID, PersonID and character name
-            if($movie && $person){
+            if ($movie && $person) {
                 DB::table('cast')->updateOrInsert([
                     'movie_id' => $movie->id,
-                    'person_id'=> $person->id,
+                    'person_id' => $person->id,
                     'character_name' => $mapping['character_name']
                 ]);
             }

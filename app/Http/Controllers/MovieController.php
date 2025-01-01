@@ -10,7 +10,13 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movie::inRandomOrder() -> get();
+        $movies = Movie::all();
+        return response()->json($movies);
+    }
+
+    public function indexRandom()
+    {
+        $movies = Movie::inRandomOrder()->get();
         return response()->json($movies);
     }
 

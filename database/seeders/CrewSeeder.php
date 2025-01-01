@@ -129,7 +129,7 @@ class CrewSeeder extends Seeder
             ['movie_title' => 'Us', 'person_name' => 'Mike Gioulakis', 'department' => 'Cinematographer'],
             ['movie_title' => 'Us', 'person_name' => 'Nicholas Monsour', 'department' => 'Editor'],
             ['movie_title' => 'Us', 'person_name' => 'Kym Barrett', 'department' => 'Costume Designer'],
-            
+
             // New Movies
             ['movie_title' => 'Oldboy', 'person_name' => 'The Director', 'department' => 'Director'],
             ['movie_title' => 'Oldboy', 'person_name' => 'The Writer', 'department' => 'Writer'],
@@ -451,10 +451,24 @@ class CrewSeeder extends Seeder
             ['movie_title' => 'Rango', 'person_name' => 'The Composer', 'department' => 'Composer'],
             ['movie_title' => 'Rango', 'person_name' => 'The Cinematographer', 'department' => 'Cinematographer'],
             ['movie_title' => 'Rango', 'person_name' => 'The Editor', 'department' => 'Editor'],
-            ['movie_title' => 'Rango', 'person_name' => 'The Costume Designer', 'department' => 'Costume Designer']
+            ['movie_title' => 'Rango', 'person_name' => 'The Costume Designer', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Morbius', 'person_name' => 'The Director', 'department' => 'Director'],
+            ['movie_title' => 'Morbius', 'person_name' => 'The Writer', 'department' => 'Writer'],
+            ['movie_title' => 'Morbius', 'person_name' => 'The Composer', 'department' => 'Composer'],
+            ['movie_title' => 'Morbius', 'person_name' => 'The Cinematographer', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Morbius', 'person_name' => 'The Editor', 'department' => 'Editor'],
+            ['movie_title' => 'Morbius', 'person_name' => 'The Costume Designer', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'IF', 'person_name' => 'The Director', 'department' => 'Director'],
+            ['movie_title' => 'IF', 'person_name' => 'The Writer', 'department' => 'Writer'],
+            ['movie_title' => 'IF', 'person_name' => 'The Composer', 'department' => 'Composer'],
+            ['movie_title' => 'IF', 'person_name' => 'The Cinematographer', 'department' => 'Cinematographer'],
+            ['movie_title' => 'IF', 'person_name' => 'The Editor', 'department' => 'Editor'],
+            ['movie_title' => 'IF', 'person_name' => 'The Costume Designer', 'department' => 'Costume Designer'],
         ];
 
-        foreach ($crewMappings as $mapping){
+        foreach ($crewMappings as $mapping) {
             //Retrieve Movie ID
             $movie = DB::table('movie')->where('title', $mapping['movie_title'])->first();
 
@@ -463,16 +477,15 @@ class CrewSeeder extends Seeder
 
             //Retrieve Department ID
             $department = DB::table('department')->where('name', $mapping['department'])->first();
-            
+
             //Add MovieID, PersonID and character name
-            if($movie && $person && $department){
+            if ($movie && $person && $department) {
                 DB::table('crew')->updateOrInsert([
                     'movie_id' => $movie->id,
-                    'person_id'=> $person->id,
+                    'person_id' => $person->id,
                     'department_id' => $department->id,
                 ]);
             }
-
         }
     }
 }
