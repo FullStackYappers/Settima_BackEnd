@@ -114,6 +114,26 @@ class CastSeeder extends Seeder
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Rupert Grint', 'character_name' => 'Ron Weasley'],
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Emma Watson', 'character_name' => 'Hermione Granger'],
 
+            ['movie_title' => 'The Prestige', 'person_name' => 'Hugh Jackman', 'character_name' => 'Robert Angier'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'Christian Bale', 'character_name' => 'Alfred Borden'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'Scarlett Johansson', 'character_name' => 'Olivia Wenscombe'],
+
+            ['movie_title' => 'IF', 'person_name' => 'Cailey Fleming', 'character_name' => 'Bea'],
+            ['movie_title' => 'IF', 'person_name' => 'Ryan Reynolds', 'character_name' => 'Cal'],
+            ['movie_title' => 'IF', 'person_name' => 'Steve Carell', 'character_name' => 'Blue'],
+
+            ['movie_title' => 'Fight Club', 'person_name' => 'Edward Norton', 'character_name' => 'Narrator'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'Brad Pitt', 'character_name' => 'Tyler Durden'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'Helena Bonham Carter', 'character_name' => 'Marla Singer'],
+
+            ['movie_title' => 'The Half of It', 'person_name' => 'Leah Lewis', 'character_name' => 'Ellie Chu'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Daniel Diemer', 'character_name' => 'Paul Munsky'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Alexxis Lemire', 'character_name' => 'Aster Flores'],
+
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Ben Affleck', 'character_name' => 'Nick Dunne'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Rosamund Pike', 'character_name' => 'Amy Dunne'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Neil Patrick Harris', 'character_name' => 'Desi Collings'],
+
             //Default Movies
             ['movie_title' => 'Oldboy', 'person_name' => 'The Actor', 'character_name' => 'Oh Dae-su'],
             ['movie_title' => 'Oldboy', 'person_name' => 'The Actress', 'character_name' => 'Mi-do'],
@@ -299,14 +319,9 @@ class CastSeeder extends Seeder
             ['movie_title' => 'Rango', 'person_name' => 'The Actress', 'character_name' => 'Beans'],
             ['movie_title' => 'Rango', 'person_name' => 'The Person', 'character_name' => 'Rattlesnake Jake'],
 
-            ['movie_title' => 'Morbius', 'person_name' => 'The Actor', 'character_name' => 'Dr. Michael Morbius'],
+            ['movie_title' => 'Morbius', 'person_name' => '', 'character_name' => 'Dr. Michael Morbius'],
             ['movie_title' => 'Morbius', 'person_name' => 'The Actress', 'character_name' => 'Milo'],
             ['movie_title' => 'Morbius', 'person_name' => 'The Person', 'character_name' => 'Martine Bancroft'],
-
-            ['movie_title' => 'IF', 'person_name' => 'The Actor', 'character_name' => 'Bea'],
-            ['movie_title' => 'IF', 'person_name' => 'The Actress', 'character_name' => 'Cal'],
-            ['movie_title' => 'IF', 'person_name' => 'The Person', 'character_name' => 'Blue'],
-
         ];
 
         foreach ($castMappings as $mapping) {

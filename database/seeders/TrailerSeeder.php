@@ -84,7 +84,10 @@ class TrailerSeeder extends Seeder
             ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'trailer_url' => 'https://www.youtube.com/watch?v=tAiy66Xrsz4&ab_channel=HarryPotter'],
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'trailer_url' => 'https://www.youtube.com/watch?v=17ywQS6XO-M&ab_channel=HarryPotter'],
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'trailer_url' => 'https://www.youtube.com/watch?v=17ywQS6XO-M&ab_channel=HarryPotter'],
-
+            ['movie_title' => 'The Prestige', 'trailer_url' => 'https://www.youtube.com/watch?v=ELq7V8vkekI'],
+            ['movie_title' => 'Fight Club', 'trailer_url' => 'https://www.youtube.com/watch?v=BdJKm16Co6M'],
+            ['movie_title' => 'The Half of It', 'trailer_url' => 'https://www.youtube.com/watch?v=B-yhF7IScUE'],
+            ['movie_title' => 'Gone Girl', 'trailer_url' => 'https://www.youtube.com/watch?v=2-_-1nJf8Vg'],
         ];
 
         foreach ($trailers as $trailer) {

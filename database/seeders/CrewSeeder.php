@@ -530,6 +530,38 @@ class CrewSeeder extends Seeder
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Eduardo Serra', 'department' => 'Cinematographer'],
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Mark Day', 'department' => 'Editor'],
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'person_name' => 'Jany Temime', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'The Prestige', 'person_name' => 'Christopher Nolan', 'department' => 'Director'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'Christopher Priest', 'department' => 'Writer'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'Jonathan Nolan', 'department' => 'Writer'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'David Julyan', 'department' => 'Composer'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'Wally Pfister', 'department' => 'Cinematographer'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'Lee Smith', 'department' => 'Editor'],
+            ['movie_title' => 'The Prestige', 'person_name' => 'Joan Bergin', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Fight Club', 'person_name' => 'David Fincher', 'department' => 'Director'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'Chuck Palahniuk', 'department' => 'Writer'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'Jim Uhls', 'department' => 'Writer'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'The Dust Brothers', 'department' => 'Composer'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'Jeff Cronenweth', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'James Haygood', 'department' => 'Editor'],
+            ['movie_title' => 'Fight Club', 'person_name' => 'Michael Kaplan', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'The Half of It', 'person_name' => 'Alice Wu', 'department' => 'Director'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Alice Wu', 'department' => 'Writer'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Anton Sanko', 'department' => 'Composer'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Greta Zozula', 'department' => 'Cinematographer'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Ian Blume', 'department' => 'Editor'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Lee Percy', 'department' => 'Editor'],
+            ['movie_title' => 'The Half of It', 'person_name' => 'Vicki Farrell', 'department' => 'Costume Designer'],
+
+            ['movie_title' => 'Gone Girl', 'person_name' => 'David Fincher', 'department' => 'Director'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Gillian Flynn', 'department' => 'Writer'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Trent Rezor', 'department' => 'Composer'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Atticus Ross', 'department' => 'Composer'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Jeff Cronenweth', 'department' => 'Cinematographer'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Kirk Baxter', 'department' => 'Editor'],
+            ['movie_title' => 'Gone Girl', 'person_name' => 'Trish Summerville', 'department' => 'Costume Designer'],
         ];
 
         foreach ($crewMappings as $mapping) {

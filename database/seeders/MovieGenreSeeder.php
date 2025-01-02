@@ -84,6 +84,10 @@ class MovieGenreSeeder extends Seeder
             ['movie_title' => 'Harry Potter and the Half-Blood Prince', 'genre_names' => ['Adventure', 'Fantasy']],
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 1', 'genre_names' => ['Adventure', 'Fantasy']],
             ['movie_title' => 'Harry Potter and the Deathly Hallows – Part 2', 'genre_names' => ['Adventure', 'Fantasy']],
+            ['movie_title' => 'The Prestige', 'genre_names' => ['Mystery', 'Science Fiction']],
+            ['movie_title' => 'Fight Club', 'genre_names' => ['Drama']],
+            ['movie_title' => 'The Half of It', 'genre_names' => ['Comedy', 'Drama']],
+            ['movie_title' => 'Gone Girl', 'genre_names' => ['Thriller', 'Drama']],
         ];
 
         foreach ($movieGenreMappings as $mapping) {
