@@ -28,6 +28,8 @@ Route::get('/movies/random', [MovieController::class, 'indexRandom']);
 Route::get('/movies/{id}', [MovieController::class, 'show']);
 Route::get('/genres/{genreName}/movies', [MovieController::class, 'fetchMoviesByGenre']);
 
+Route::get('/movies/{movieId}/trailer', [MovieController::class, 'fetchTrailers']);
+
 //Movie Posters
 Route::get('/movie-posters/{movie_id}', [MoviePosterController::class, 'show']);
 

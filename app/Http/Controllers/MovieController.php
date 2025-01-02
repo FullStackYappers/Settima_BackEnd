@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Movie;
 use App\Models\Genre;
+use App\Models\Trailer;
 
 class MovieController extends Controller
 {
@@ -46,6 +47,18 @@ class MovieController extends Controller
         }
 
         return response()->json(['message' => 'Genre not found'], 404);
+    }
+
+    public function fetchTrailers($movie_id)
+    {
+        $movie = Movie::find($movie_id);
+        $trailer = $movie->trailer;
+
+        if ($trailer) {
+            return response()->json(['trailer_url' => $trailer->trailer_url]);
+        }
+
+        return response()->json(['message' => 'Trailer not found'], 404);
     }
 
     public function store(Request $request)
