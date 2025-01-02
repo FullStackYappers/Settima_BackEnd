@@ -37,7 +37,6 @@ class MovieController extends Controller
     {
         $genre = Genre::whereRaw('LOWER(name) = ?', [strtolower($genreName)])->first();
 
-
         if ($genre) {
             $movies = $genre->movies()
                 ->inRandomOrder()
@@ -47,6 +46,19 @@ class MovieController extends Controller
         }
 
         return response()->json(['message' => 'Genre not found'], 404);
+    }
+
+    public function fetchGenresFromMovie($movie_id)
+    {
+        $movie = Movie::find($movie_id);
+
+        if ($movie) {
+            $genres = $movie->genres;
+
+            return $genres->pluck('name');
+        }
+
+        return null;
     }
 
     public function fetchTrailers($movie_id)

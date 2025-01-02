@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CastController;
+use App\Http\Controllers\CrewController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\FavoritesController;
@@ -27,8 +29,14 @@ Route::get('/movies', [MovieController::class, 'index']);
 Route::get('/movies/random', [MovieController::class, 'indexRandom']);
 Route::get('/movies/{id}', [MovieController::class, 'show']);
 Route::get('/genres/{genreName}/movies', [MovieController::class, 'fetchMoviesByGenre']);
+Route::get('/movies/{movie_id}/genres', [MovieController::class, 'fetchGenresFromMovie']);
 
+//Fetch trailers for the movies
 Route::get('/movies/{movieId}/trailer', [MovieController::class, 'fetchTrailers']);
+
+//Fetch cast and crew for the movie
+Route::get('movies/{movieId}/crew', [CrewController::class, 'index']);
+Route::get('movies/{movieId}/cast', [CastController::class, 'index']);
 
 //Movie Posters
 Route::get('/movie-posters/{movie_id}', [MoviePosterController::class, 'show']);
