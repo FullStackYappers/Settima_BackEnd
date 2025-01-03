@@ -29,14 +29,17 @@ Route::get('/movies', [MovieController::class, 'index']);
 Route::get('/movies/random', [MovieController::class, 'indexRandom']);
 Route::get('/movies/{id}', [MovieController::class, 'show']);
 Route::get('/genres/{genreName}/movies', [MovieController::class, 'fetchMoviesByGenre']);
-Route::get('/movies/{movie_id}/genres', [MovieController::class, 'fetchGenresFromMovie']);
+Route::get('/movies/{movieId}/genres', [MovieController::class, 'fetchGenresFromMovie']);
 
 //Fetch trailers for the movies
 Route::get('/movies/{movieId}/trailer', [MovieController::class, 'fetchTrailers']);
 
 //Fetch cast and crew for the movie
-Route::get('movies/{movieId}/crew', [CrewController::class, 'index']);
-Route::get('movies/{movieId}/cast', [CastController::class, 'index']);
+Route::get('/movies/{movieId}/crew', [CrewController::class, 'index']);
+Route::get('/movies/{movieId}/cast', [CastController::class, 'index']);
+
+//Search
+Route::get('/movies', [MovieController::class, 'search']);
 
 //Movie Posters
 Route::get('/movie-posters/{movie_id}', [MoviePosterController::class, 'show']);

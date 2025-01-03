@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Movie;
 use App\Models\Genre;
-use App\Models\Trailer;
+use Illuminate\Support\Facades\Log;
 
 class MovieController extends Controller
 {
@@ -71,6 +71,18 @@ class MovieController extends Controller
         }
 
         return response()->json(['message' => 'Trailer not found'], 404);
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('search');
+        if (!$query) {
+            return $this->index($request);
+        }
+
+        //using sql to fetch the title
+        $movies = Movie::whereRaw('LOWER(title) LIKE ?', ['%' . strtolower($query) . '%'])->get();
+        return response()->json($movies);
     }
 
     public function store(Request $request)
