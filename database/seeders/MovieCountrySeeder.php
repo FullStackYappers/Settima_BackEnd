@@ -91,7 +91,7 @@ class MovieCountrySeeder extends Seeder
         ];
 
         foreach ($movieCountryMappings as $mapping) {
-            $movieId = DB::table('movie')->where('title', $mapping['movie_title'])->value('id');
+            $movieId = DB::table('movies')->where('title', $mapping['movie_title'])->value('id');
             foreach ($mapping['country_names'] as $countryName) {
                 $countryId = DB::table('country')->where('name', $countryName)->value('id');
                 if ($movieId && $countryId) {

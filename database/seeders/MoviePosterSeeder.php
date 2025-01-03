@@ -81,7 +81,7 @@ class MoviePosterSeeder extends Seeder
         ];
 
         foreach ($movie_posters as $movie_poster){
-            $movie_id = DB::table('movie')->where('title', $movie_poster['movie_title'])->first();
+            $movie_id = DB::table('movies')->where('title', $movie_poster['movie_title'])->first();
 
             DB::table('movie_poster')->updateOrInsert(
                 ['movie_id' => $movie_id->id, 'poster_path' => $movie_poster['poster_path']],

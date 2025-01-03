@@ -326,7 +326,7 @@ class CastSeeder extends Seeder
 
         foreach ($castMappings as $mapping) {
             //Retrieve Movie ID
-            $movie = DB::table('movie')->where('title', $mapping['movie_title'])->first();
+            $movie = DB::table('movies')->where('title', $mapping['movie_title'])->first();
 
             //Retrieve Person ID
             $person = DB::table('person')->where('name', $mapping['person_name'])->first();

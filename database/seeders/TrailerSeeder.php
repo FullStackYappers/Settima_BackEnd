@@ -91,7 +91,7 @@ class TrailerSeeder extends Seeder
         ];
 
         foreach ($trailers as $trailer) {
-            $movie_id = DB::table('movie')->where('title', $trailer['movie_title'])->first();
+            $movie_id = DB::table('movies')->where('title', $trailer['movie_title'])->first();
 
             DB::table('trailers')->updateOrInsert(
                 ['movie_id' => $movie_id->id, 'trailer_url' => $trailer['trailer_url']],

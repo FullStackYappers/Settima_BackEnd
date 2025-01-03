@@ -94,7 +94,7 @@ class MovieSeeder extends Seeder
         ];
 
         foreach ($movies as $movie) {
-            DB::table('movie')->updateOrInsert(
+            DB::table('movies')->updateOrInsert(
                 ['title' => $movie['title']],
                 $movie
             );

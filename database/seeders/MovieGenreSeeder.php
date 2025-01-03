@@ -91,7 +91,7 @@ class MovieGenreSeeder extends Seeder
         ];
 
         foreach ($movieGenreMappings as $mapping) {
-            $movie = DB::table('movie')->where('title', $mapping['movie_title'])->first();
+            $movie = DB::table('movies')->where('title', $mapping['movie_title'])->first();
             foreach ($mapping['genre_names'] as $genreName) {
                 $genre = DB::table('genre')->where('name', $genreName)->first();
                 DB::table('movie_genre')->updateOrInsert([
