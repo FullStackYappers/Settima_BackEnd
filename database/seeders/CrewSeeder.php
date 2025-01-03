@@ -488,7 +488,7 @@ class CrewSeeder extends Seeder
             ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Steve Kloves', 'department' => 'Writer'],
             ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'John Williams', 'department' => 'Composer'],
             ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Michael Seresin', 'department' => 'Cinematographer'],
-            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Alexandra D. Berner', 'department' => 'Editor'],
+            ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Steven Weisberg', 'department' => 'Editor'],
             ['movie_title' => 'Harry Potter and the Prisoner of Azkaban', 'person_name' => 'Jany Temime', 'department' => 'Costume Designer'],
 
             ['movie_title' => 'Harry Potter and the Goblet of Fire', 'person_name' => 'Mike Newell', 'department' => 'Director'],
